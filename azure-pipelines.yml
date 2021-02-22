@@ -33,13 +33,13 @@ stages:
   dependsOn: Build
   jobs: 
   - job: Provision
-    displayName: 'Provisioning Contianer Instance'
+    displayName: 'Provisioning Container Instance'
     pool:
       vmImage: 'ubuntu-latest'
     variables: 
     - group: TerraEnvVars
     steps: 
-    - script:
+    - script: |
         set -e
 
         terraform init -input=false
