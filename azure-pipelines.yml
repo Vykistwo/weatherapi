@@ -30,7 +30,7 @@ stages:
           $(tag)
 - stage: Provision
   displayName: 'Terraforming on Azure'
-  dependson: Build
+  dependsOn: Build
   jobs: 
   - job: Provision
     displayname: 'Provisioning Contianer Instance'
