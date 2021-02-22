@@ -28,7 +28,7 @@ stages:
        Dockerfile: '**/Dockerfile'
        tags: |
           $(tag)
--stage: Provision
+- stage: Provision
   displayName: 'Terraforming on Azure'
   dependson: Build
   jobs: 
